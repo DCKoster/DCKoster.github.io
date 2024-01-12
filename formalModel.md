@@ -1,3 +1,7 @@
+layout: page
+title: Formal Model
+permalink: /model/
+
 # Formal Model
 The model will be presented as a S53 Kripke Model: ⟨S, π, Ra, Rb, Rc⟩. Each world w in S represents a set of three positive integers which are possible values on the heads of the three participants, in the order of Achmed, Bert, Carl. Since one of these three values has to be the sum of the other two, a world (a, b, c) follows one of these three rules:
 a = b + c 
