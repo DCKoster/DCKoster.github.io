@@ -9,7 +9,7 @@ url: "https://dckoster.github.io/" # the base hostname & protocol for your site,
 # Build settings
 remote_theme: pages-themes/architect@v0.2.0
 #theme: minimal
-markdown: kramdown
+#markdown: kramdown
 plugins:
 #  - jekyll-feed
   - jekyll-remote-theme # add this line to the plugins list if you already have one
@@ -21,6 +21,6 @@ header_pages:
   - analysis.md 
   - references.md
 
-minima:
-  social_links:
-    github: dckoster/DCKoster.github.io
+#minima:
+#  social_links:
+#    github: dckoster/DCKoster.github.io
