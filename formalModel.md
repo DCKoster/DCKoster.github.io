@@ -1,5 +1,5 @@
 layout: page
-title: Formal Model
+title: Model
 permalink: /model/
 
 # Formal Model
