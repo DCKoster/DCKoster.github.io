@@ -8,7 +8,7 @@ url: "https://dckoster.github.io/" # the base hostname & protocol for your site,
 
 # Build settings
 #remote_theme: pages-themes/architect@v0.2.0
-theme: minima
+theme: architect
 markdown: kramdown
 plugins:
   - jekyll-feed
