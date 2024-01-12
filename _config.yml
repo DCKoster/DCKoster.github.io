@@ -12,13 +12,13 @@ theme: minima
 markdown: kramdown
 plugins:
   - jekyll-feed
-  - jekyll-remote-theme # add this line to the plugins list if you already have one
+#  - jekyll-remote-theme # add this line to the plugins list if you already have one
 
 header_pages:
-  - formalModel.md
-  - analysis.md
-  - strategy.md
   - introduction.md
+  - formalModel.md
+  - strategy.md
+  - analysis.md 
   - references.md
 
 minima:
