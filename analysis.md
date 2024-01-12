@@ -8,7 +8,7 @@ For the Analysis, the three different starting points (2, 1, 1), (1, 2, 1) and (
 The first starting point will be (2, 1, 1). This starting point is in the form (b+c, b, c). As explained for the formal model, it is connected to the node (b+c, b + 2*c, c) through a relation for b and the node (b+c, b, 2*b + c) through a relation for c. 
 The nodes will continue to branch out, with each node having one relation for a, one for b and one for c. The starting state of this part of the Kripke Model can be seen in figure INSERT.
 
-![Minion](https://guides.github.com/assets/1_1.png)
+![Minion](https://github.com/DCKoster/DCKoster.github.io/tree/main/assets/1_1.png)
 
 
 After the first public announcement, in which Achmed announces that he does not know his number, the option for (2, 1, 1) is removed from the model. This is because Achmed would know his number if he were to see two ones, and Bert and Carl, perfect logicians as they are, would realise this as well. The second state can be seen in figure INSERT. 
