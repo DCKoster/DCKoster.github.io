@@ -7,7 +7,8 @@ baseurl: "/riddle" # the subpath of your site, e.g. /blog
 url: "https://dckoster.github.io/" # the base hostname & protocol for your site, e.g. http://example.com
 
 # Build settings
-remote_theme: pages-themes/architect@v0.2.0
+#remote_theme: pages-themes/architect@v0.2.0
+theme: minima
 markdown: kramdown
 plugins:
   - jekyll-feed
@@ -19,3 +20,7 @@ header_pages:
   - strategy.md
   - introduction.md
   - references.md
+
+minima:
+  social_links:
+    github: dckoster/DCKoster.github.io
