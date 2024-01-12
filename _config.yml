@@ -11,12 +11,12 @@ remote_theme: pages-themes/slate@v0.2.0
 plugins:
   - jekyll-remote-theme # add this line to the plugins list if you already have one
 
-#header_pages:
-#  - introduction.md
-#  - formalModel.md
-#  - strategy.md
-#  - analysis.md 
-#  - references.md
+header_pages:
+  - introduction.md
+  - formalModel.md
+  - strategy.md
+  - analysis.md 
+  - references.md
 
 #minima:
 #  social_links:
