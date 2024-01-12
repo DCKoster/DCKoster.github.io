@@ -1,3 +1,7 @@
+layout: page 
+title: Strategy
+permalink: /strategy/
+
 # Strategy
 The key to getting to the solution for this riddle, is breaking down how knowledge progresses when the public announcements are made. In the analysis, which will be shown in the next paragraph, the step-by-step influence of these public announcements are shown. In this strategies section, the way to solve the riddle is discussed. 
 
