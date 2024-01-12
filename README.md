@@ -1,4 +1,4 @@
-#Introduction 
+# Introduction 
 In this project we analyze the riddle “Who has the Sum?” which was invented by Jonathan Welton. The riddle goes as follows [1]:
 
 Achmed, Bert, and Carl all have a positive integer on their forehead. They can only see the foreheads of others. One of the numbers is the sum of the other two. All the previous is common knowledge, all agents are perfect logicians, they always speak the truth, which is also common knowledge. They now successively make the truthful announcements: 
