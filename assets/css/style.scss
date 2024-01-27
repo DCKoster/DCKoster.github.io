@@ -30,7 +30,7 @@
 
 /* Basic Button Styling */
 .button {
-        background-color: #6c757d; /* Slate button color */
+        background-color: #333300; /* Slate button color */
         color: white; /* Text color */
         padding: 10px 20px; /* Top/bottom and left/right padding */
         border: none; /* No border */
@@ -47,7 +47,7 @@
 }
 
 .button:active {
-        background-color: #3e8e41;
+        background-color: #333333;
         box-shadow: 0 5px #666;
         transform: translateY(4px);
 }
