@@ -44,5 +44,12 @@ h1, h2, h3, h4, h5, h6 {
         transform: translateY(4px);
 }
 
+.button-container {
+    width: 10%; /* Full width of the page */
+    max-width: 1200px; /* Or any maximum width you prefer */
+    margin: 0 auto; /* Center align if using max-width */
+    /* Add other styling as needed (like padding) */
+}
+
 
 
