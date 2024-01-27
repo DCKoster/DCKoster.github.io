@@ -1,6 +1,8 @@
+---
 layout: page
 title: Analysis
 permalink: /analysis/
+---
 
 # Analysis
 For the Analysis, the three different starting points (2, 1, 1), (1, 2, 1) and (1, 1, 2) are incorporated into a Kripke Model. As it is not possible for these worlds to reach each other, they will be shown in separate figures to provide a better understanding of what is happening at each step. 
