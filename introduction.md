@@ -1,8 +1,8 @@
----
+
 layout: page 
 title: Introduction
 permalink: /introduction/
----
+
 
 # Introduction 
 In this project we analyze the riddle “Who has the Sum?” which was invented by Jonathan Welton. The riddle goes as follows [1]:
