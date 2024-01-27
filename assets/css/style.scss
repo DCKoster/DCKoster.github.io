@@ -14,10 +14,14 @@ h1, h2, h3, h4, h5, h6 {
     color: #CC9933; /* A shade of blue for all headings */
 }
 .main-content {
-    width: 130%; /* Full width */
+    width: 100%; /* Full width */
     max-width: 1200px; /* Maximum width, adjust as needed */
     margin: 0 auto; /* Center the container */
     padding: 0 20px; /* Add some padding */
+}
+
+.inner {
+    max-width: 720px; /* Adjust this value as needed */
 }
 
 /* Basic Button Styling */
