@@ -2,7 +2,18 @@
 ---
 
 @import "jekyll-theme-slate";
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap')
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+/* Apply Montserrat font to the entire body */
+body {
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+}
+
+/* Custom color for headings */
+h1, h2, h3, h4, h5, h6 {
+    color: #CC9933; /* A shade of blue for all headings */
+}
 
 /* Basic Button Styling */
 .button {
