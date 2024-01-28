@@ -31,21 +31,28 @@ title: Strategy
     <!-- Main content area -->
     <div class="content">
         <h2></h2>
-        <p>
-            <!-- Description or content of the analysis -->
-            This section can contain the details about your analysis. Replace this text with your own content.
-        </p>
 
-        <!-- Additional content can go here -->
-        <p>
-            More analysis details can be added in this section. Feel free to add more text or images.
-        </p>
+
+        <p> One solution to the problem of having infinite worlds is given by \citeauthor{vanditmarschWhoHasSum2015a} \citeyearpar{vanditmarschWhoHasSum2015a} and is described in this section. 
+            We will copy their strategy, but while \citeauthor{vanditmarschWhoHasSum2015a} do not mention Kripke models, 
+            we will explain the strategy more formally as a Kripke model, including and public announcement logic.</p>
+
+        <p> Even though \citeauthor{vanditmarschWhoHasSum2015a} do not mention Kripke models, they do create one, 
+            instead calling it a binary tree of uncertainty. This model is constructed by starting with world \( (2, 1, 1) \), 
+            then adding all worlds that have a relation with this world, then adding all worlds that have a relation with those worlds, 
+            and so on. Every such recursive step is done in the following, systematic way.</p>
+
+        <p> Each world has 3 relations \( \sim_a \), \( \sim_b \), and \( \sim_c \) with other worlds, 1 for each agent, 
+            because as explained before, the agents know they have either the sum or the difference of the other two numbers.
+            To construct the model recursively, for every world \( w = (n_a, n_b, n_c) \), the worlds \( u \) and \( v \) 
+            are added to the Kripke model, where </p>
+
+        <p> where (\ max = max(n_a,n_b,n_c) \). </p>
+
+        <p> We claimed that each world has 3 relations to other worlds, but there is an exception: the world (\ (2, 1, 1) \). 
+            We call this a <code>&ldquo;root world&rdquo;</code>, 
+            because this is starting point from where all worlds are added to the model with equation \ref{eq:branch}. 
+            We define a root world as follows:</p>
     </div>
-
-    <!-- Footer section -->
-    <footer>
-        <p>© 2024 Your Name or Organization</p>
-    </footer>
-
 </body>
 </html>
