@@ -28,6 +28,20 @@
     margin-left: 20px; /* Adjust the value as needed */
 }
 
+.image-container-3 {
+    display: flex;
+    justify-content: space-around; /* Space out images inside */
+    max-width: 600px; /* Adjust container max-width as needed */
+    width: 100%; /* Container takes full width of its parent up to max-width */
+    margin: 0 auto; /* Centering the container */
+}
+
+.image-container-3 img {
+    width: 30%; /* Each image takes up roughly a third of the container width */
+    height: auto; /* Maintain aspect ratio */
+    max-width: 200px; /* Optional: max-width for each image */
+}
+
 /* Basic Button Styling */
 .button {
         background-color: #333300; /* Slate button color */
@@ -58,6 +72,8 @@
     margin: 0 auto; /* Center align if using max-width */
     /* Add other styling as needed (like padding) */
 }
+
+
 
 
 
