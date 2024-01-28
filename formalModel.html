@@ -8,6 +8,8 @@ title: Formal Model
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <title>Formal Model Page</title>
 </head>
 <body>
@@ -31,21 +33,64 @@ title: Formal Model
     <!-- Main content area -->
     <div class="content">
         <h2></h2>
-        <p>
-            <!-- Description or content of the analysis -->
-            This section can contain the details about your analysis. Replace this text with your own content.
-        </p>
+    
+        <p>The model will be presented in the public announcement logic language \( \mathcal{L}_{K[]} \) as referenced in <a href="your-citation-link">van Ditmarsch and Kooi (2008)</a> as an \( S5_3 \) Kripke Model \( M = \langle S, \sim, V \rangle \).</p>
 
-        <!-- Additional content can go here -->
-        <p>
-            More analysis details can be added in this section. Feel free to add more text or images.
-        </p>
+        <p>Since it is an \( S5 \) model, all accessibility relations are equivalence relations (symmetric, transitive, reflexive). 
+            Reflexive relations will not be drawn in the figures. Edges represent symmetric arrows. 
+            Furthermore, there is always either 0 or 1 edge between each world, 
+            where the edge represents a symmetric relation \( \sim_i \) for agent \( i \). 
+            This is because the riddle states that one of three has the sum of the other two, 
+            and therefore each of the three persons knows they have either the sum themselves, 
+            or they have the difference of the two values they see on the others’ heads. 
+            So the only edges for one person are between two such possible worlds, 
+            and these never overlap with the equivalence relations of the others. 
+            Finally, if there is a relation \( w \sim_i u \) for some agent \( i \) where in world \( w \) agent \( i \) 
+            has the sum and in world \( u \) agent \( i \) has the difference, 
+            there is no relation \( w \sim_i v \) nor \( u \sim_i v \). 
+            This means that the transitivity of the model does not matter.</p>
+        
+        <p>Each world \( w \) in \( S \) represents 3 numbers \( n_a \), \( n_b \), and \( n_c \) and is referenced as \( (n_a, n_b, n_c) \) 
+            corresponding to three positive integers which are the values on the heads of the three participants, 
+            in the order of Achmed, Bert, and Carl respectively. Since one of these three values has to be the sum of the other two, 
+            worlds follow one of these three rules:</p>
+        
+        <ol>
+            <li>\( n_a = n_b + n_c \)</li>
+            <li>\( n_b = n_a + n_c \)</li>
+            <li>\( n_c = n_a + n_b \)</li>
+        </ol>
+        
+        <p>The riddle does not state any upper bound for the numbers. The only constraint is that they are positive integers 
+            and therefore larger than 0. When converting the numbers \( n_a \), \( n_b \), and \( n_c \) to atomic propositions, 
+            there is technically an infinite number of atomic propositions in each world. 
+            For example, the atomic proposition \( 1_a \) means "Achmed's number is 1". 
+            And for all worlds \( w = (n_a, n_b, n_c) \):</p>
+        
+        <ul>
+            <li>\( w \in V(x_a) \) iff \( n_a = x \)</li>
+            <li>\( w \in V(x_b) \) iff \( n_b = x \)</li>
+            <li>\( w \in V(x_c) \) iff \( n_c = x \)</li>
+        </ul>
+        
+        <p>Therefore \( M, (1, 2, 3) \vDash 1_a \land 2_b \land 3_c \). Since there is no upper bound, 
+            the Kripke model would also at first glance have to include an infinite number of worlds to create an accurate model, 
+            though this is not necessary as will be explained in <a href="strategy.html">Strategy</a> </p>
+        
+        <p>We regard a public announcement as a model transformer, so the truthful public announcement \( \varphi \) 
+            restricts the Kripke model to the states where \( \varphi \) holds. 
+            The four announcements from the riddle can be written in \( \mathcal{L}_{K[]} \) 
+            formally as three sets of infinite announcements plus one final announcement as follows:</p>
+        
+        <ol>
+            <li>\( \neg K_a 1_a \land \neg K_a 2_a \land \ldots \land \neg K_a x_a \) (for all \( x \in \mathbb{Z}^+ \))</li>
+            <li>\( \neg K_b 1_b \land \neg K_b 2_b \land \ldots \land \neg K_b x_b \) (for all \( x \in \mathbb{Z}^+ \))</li>
+            <li>\( \neg K_c 1_c \land \neg K_c 2_c \land \ldots \land \neg K_c x_c \) (for all \( x \in \mathbb{Z}^+ \))</li>
+            <li>\( K_a 50_a \)</li>
+        </ol>
+
     </div>
 
-    <!-- Footer section -->
-    <footer>
-        <p>© 2024 Your Name or Organization</p>
-    </footer>
 
 </body>
 </html>
