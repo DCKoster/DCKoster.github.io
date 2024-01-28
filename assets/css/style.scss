@@ -39,10 +39,11 @@
 .image-container {
     flex: 1; /* Each container takes equal space */
     text-align: center; /* Center content inside the container */
+    max-width: 100%; /* Make image responsive */
 }
 
 .image-container img {
-    max-width: 100%; /* Make image responsive */
+    width: 48.75%; /* Each image takes up roughly halve of the container width */
     height: auto; /* Maintain aspect ratio */
 }
 
@@ -58,7 +59,7 @@
 }
 
 .image-container-style2 img {
-    width: 48.75%; /* Each image takes up roughly a third of the container width */
+    width: 48.75%; /* Each image takes up roughly halve of the container width */
     height: auto; /* Maintain aspect ratio */
 }
 
