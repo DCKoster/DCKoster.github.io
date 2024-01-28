@@ -28,6 +28,28 @@
     margin-left: 20px; /* Adjust the value as needed */
 }
 
+.image-gallery {
+    display: flex; /* Use Flexbox for layout */
+    justify-content: space-between; /* Distribute space evenly between elements */
+    align-items: center; /* Align items vertically */
+    margin: 0 auto; /* Centering the figure element */
+    padding: 20px; /* Padding around the content */
+}
+
+.image-container {
+    flex: 1; /* Each container takes equal space */
+    text-align: center; /* Center content inside the container */
+}
+
+.image-container img {
+    max-width: 100%; /* Make image responsive */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.image-container figcaption {
+    margin-top: 8px; /* Space between image and its caption */
+}
+
 .image-container-style2 {
     display: flex;
     justify-content: space-around; /* Space out images inside */
