@@ -11,6 +11,14 @@ title: Strategy
     <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <title>Strategy Page</title>
+
+    <style>
+    .equation-number {
+        display: inline-block;
+        margin-left: 20px;
+        font-style: italic;
+    }
+    </style>
 </head>
 <body>
 
@@ -50,12 +58,41 @@ title: Strategy
             To construct the model recursively, for every world \( w = (n_a, n_b, n_c) \), the worlds \( u \) and \( v \) 
             are added to the Kripke model, where </p>
 
+        <div>
+            <img src="/assets/threesum_world_progression.png" alt="A formula to explain how the progession of worlds goes">
+        </div>
+
         <p> where \( max = max(n_a,n_b,n_c) \). </p>
 
         <p> We claimed that each world has 3 relations to other worlds, but there is an exception: the world \( (2, 1, 1) \). 
-            We call this a <code>&ldquo;root world&rdquo;</code>, 
-            because this is starting point from where all worlds are added to the model with equation \ref{eq:branch}. 
+            We call this a "root world", because this is starting point from where all worlds are added to the model with equation \ref{eq:branch}. 
             We define a root world as follows:</p>
+
+        <p class="root-world">A root world is a world that has a smaller number of relations with other worlds than the number of agents, before any public announcements are made.<span class="equation-number">(2)</span></p>
+        <p class="specifically">Specifically,</p>
+        <p class="indent">For the riddle “Who has the Sum” with 3 agents, a world is a root world iff the difference between the two smallest numbers is smaller than or equal to 0.<span class="equation-number">(3)</span></p>
+        <p class="indent">In a root world, at least one of the agents knows what their own number is before any announcements are made. 
+            For example, the root world \( (2, 1, 1) \) has only two relations because Achmed sees two 1’s, and therefore knows he himself
+            has the sum 2, since the difference \( 1 − 1 \) is 0, and only positive integers are allowed according to the riddle.</p>
+
+        <p> As mentioned, public announcement act as model transformers. When an announcement \( \varphi \) is made, all worlds where \( \varphi \) does not hold, are removed from
+            the model to form the reduced model. Now consider the case where there are no root worlds. All worlds have three relations with other worlds, and therefore
+            in every world, every agent is not sure what their own number is. In this case, when any of the first three announcements are made, the reduced model is the
+            exact same as the initial model, because in every world it holds that none of the agents know their number. Additionally, Achmeds announcement \( K_a 50_a \) would
+            create an empty reduced model.</p>
+
+        <p> This makes it clear that the riddle can not be solved when there are no root worlds. When there are root worlds however, these may not be included
+            in the reduced model after an announcement is made. This makes it so that the worlds which had relation \( \sim_i \) with the root world, agent <i>i</i> now knows what
+            their number is. The riddle can therefore be solved by reducing the model four times, once for every public announcement, if it eventually leads to a reduced
+            model where Achmed knows that his number is 50. The answer to the riddle would be the numbers of Bert and Carl in that world.</p>
+
+        <p> This also solves the problem of having infinite worlds. For the same reason that a model without any root world <i>r</i> would not lead to a solution, the worlds
+            <i>w</i> where <i>k</i> &gt; 4 in <i>r</i> &rarr;<sup><i>k</i></sup> <i>w</i>, are irrelevant. This is because it is impossible for any
+            agent to know their number in any of these worlds even after all announcements are made. Additionally, none of the worlds where <i>k</i> = 4 can be worlds where
+            Achmed knows his number is 50. These worlds are only necessary to model because they can have relations with worlds where <i>k</i> = 3, which <i>can</i> be worlds
+            where Achmed knows his number is 50.</p>
+
+        
     </div>
 </body>
 </html>
