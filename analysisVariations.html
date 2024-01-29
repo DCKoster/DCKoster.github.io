@@ -8,6 +8,8 @@ title: Analysis Variations
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <title>Analysis Variations Page</title>
 </head>
 <body>
@@ -31,9 +33,25 @@ title: Analysis Variations
 
     <!-- Main content area -->
     <div class="content">
-        <h2>Analysis of the four person "Who has the Sum?" Riddle</h2>
         <p>
-            This section can contain the details about your Analysis Variations. Replace this text with your own content.
+            For the analysis of both variations, the same <a href="strategy.html">strategy</a> as was used in the <a href="analysis.html">analysis</a> of the threesum will be used. 
+            Because there is an infinite amount of root worlds, one root world for both variations is chosen as example. 
+        </p>
+
+        
+        <h2>Analysis of the Four Person "Who has the Sum?" Riddle</h2>
+        <p>
+            For the Four Person "Who has the Sum?", the root world will be \( (3, 1, 1, 1) \). This root world is in the form \( (n_a, n_b, n_c, n_d) \) with \( max = n_a \). As explained in <a href="variations.html">the variations</a>, it is connected to 
+            \( t = (n_a, [n_a + n_c + n_d], n_c, n_d) \) through \(w \sim_b t\),
+            \( u = (n_a, n_b, [n_a + n_b + n_d], n_d) \) through \(w \sim_c u\), and 
+            \( v = (n_a, n_b, n_c, [n_a + n_b + n_c]) \) through \(w \sim_d v\).
+            The worlds will continue to branch out, with each world having one relation for agent <i>a</i> (Achmed), one for agent <i>b</i> (Bert), one for agent <i>c</i> (Carl), and one for agent <i>d</i> (Dana). 
+            The root world of this part of the Kripke Model can be seen in figure 1
+        </p>
+
+        <p>
+            The first public announcement of Achmed removes the world in which it does not hold, which is \( (3, 1, 1, 1) \). 
+            The resulting state can be seen in figure 2.
         </p>
 
         <!-- Image container -->
@@ -51,6 +69,12 @@ title: Analysis Variations
             </div>
         </figure>
 
+        <p>
+            The second announcement by Bert and third announcement by Carl both also remove the worlds where they do not hold.
+            These are \( (3, 5, 1, 1) \) for Bert's announcement, and  \( (3, 1, 5, 1) \) and \( (3, 5, 9, 1) \) for Carl's announcement. 
+            The resulting state after the second and third announcements can be seen in figures 3 and 4 respectively. 
+        </p>
+
         <figure class="image-gallery">
             <div class="image-container">
                 <img src="/assets/4_3.png" alt="Another step of the analysis ">
@@ -62,6 +86,17 @@ title: Analysis Variations
                 <figcaption>Figure 4: The graph after the third public announcement. All worlds where it does not hold are removed.</figcaption>
             </div>
         </figure>
+
+        <p>
+            The fourth announcement by Dana, the new agent in this variation, has a bigger impact on the Kripke Model than the previous announcements. 
+            The worlds which will be removed as the announcement does not hold are: \( (3, 1, 1, 5) \), \( (3, 1, 5, 9) \), \( (3, 5, 1, 9) \), \( (3, 5, 9, 17) \).
+            The resulting state after the announcemnt can be seen in figure 5. 
+        </p>
+
+        <p>
+            The fifth announcement is Achmed announcing he knows his number. The worlds where this announcement holds are highlighted in red in figure 6. 
+            These are:  \( (7, 1, 1, 5) \),  \( (7, 1, 5, 1) \), \( (7, 5, 1, 1) \), \( (15, 1, 5, 9) \), \( (15, 5, 9, 1) \), \( (15, 5, 1, 9) \), and \( (31, 5, 9, 17) \).
+        </p>
 
         <figure class="image-gallery">
             <div class="image-container">
@@ -75,6 +110,7 @@ title: Analysis Variations
             </div>
         </figure>   
 
+        
 
         <h2>Analysis of the "Who has the Product?" Riddle</h2>
         <p>
