@@ -114,7 +114,14 @@ title: Analysis Variations
 
         <h2>Analysis of the "Who has the Product?" Riddle</h2>
         <p>
-            This section can contain the details about your Analysis Variations. Replace this text with your own content.
+            For the "Who has the Product?" Riddle, the root world will be \( (2, 2, 1) \). This root world is in the form \( (n_a, n_b, n_c) \) with \( max = n_a = n_b\). As explained in <a href="variations.html">the variations</a>, it is connected to 
+            \( v = (n_a, n_b, [n_a * n_b]) \) through \(w \sim_c v\).
+            The worlds will continue to branch out, with each world having one relation for agent <i>a</i> (Achmed), one for agent <i>b</i> (Bert), and one for agent <i>c</i> (Carl). 
+            The root world of this part of the Kripke Model can be seen in figure 7.
+        </p>
+        <p>
+            The first public announcement by Achmed, saying that he does not know his number, does not hold in the root world \( (2, 2, 1) \). 
+            The state of the Kripke Model after this announcement can be seen in figure 8. 
         </p>
 
         <figure class="image-gallery">
@@ -130,6 +137,17 @@ title: Analysis Variations
                     all worlds where this announcement does not hold are removed.</figcaption>
             </div>
         </figure>
+
+        <p>
+            The second public announcement by Bert does not influence the model as there is no world where it does not hold. 
+            The third public announcement by Carl does, as the announcement does not hold in world \( (2, 2, 4) \). 
+            The resulting model is shown in figure 9.
+        </p>
+
+        <p>
+            The last public announcements, Achmed announces that he now knows his number, holds in all worlds which are highlighted in figure 10. 
+            This is only the world \( (8, 2, 4) \)
+        </p>
 
         <figure class="image-gallery">
             <div class="image-container">
