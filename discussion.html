@@ -34,6 +34,27 @@ title: Discussion
     <div class="content">
         
         <p>
+            In this project, it has been shown that the "Who has the Sum" riddle can be solved by Kripke Models. 
+            It was already been solved in a very similar way <a href="index.html#references"  class="reference-link">(van Ditmarsch and Kooi, 2015)</a>, 
+            but this project has formalized the model using the language of announcement logic and 
+            shown within the implementation that the answer of \( (50, 20, 30) \) is indeed the only answer possible. 
+            The variants implemented in this report, show interesting but similar results.
+        </p>
+        <p>
+            At first, adding an agent to the riddle looked like a relatively small change. 
+            However, when looking at the effect it has, it was enough to completely renew the riddle. 
+            The extra branches that arise from the extra agent was not the only change resulting from this. 
+            The extra agent caused the formula defining the root worlds in the original riddle to be insufficient, 
+            as those root worlds and their bisimilar worlds were not enough anymore to reach all possible worlds. 
+            This resulted in the amount of root worlds exploding towards infinity, making the Kripke Model approach not efficient anymore.
+        </p>
+        <p>
+            In the "Who has the Product" riddle, the same can be seen. By removing the bisimilarity of the disconnected trees, 
+            the amount of root worlds also exploded. Because of this, the same conclusion can be made as in the other variation: 
+            the Kripke Model approach is not efficient when solving this riddle. 
+        </p>
+
+        <p>
             
         </p>
 
