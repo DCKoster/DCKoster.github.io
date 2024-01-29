@@ -14,11 +14,15 @@
     color: #CC9933;
 } */
 
-p i {
+p i {/* Make sure the italic text works in <p> */
     font-style: italic !important;
 }
 
-p b {
+p b { /* Make sure the bold text works in <p> */
+    font-weight: bold !important;
+}
+
+li b { /* Make sure the bold text works in <li> */
     font-weight: bold !important;
 }
 
