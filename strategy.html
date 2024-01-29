@@ -68,10 +68,13 @@ title: Strategy
             We call this a "root world", because this is starting point from where all worlds are added to the model with equation \ref{eq:branch}. 
             We define a root world as follows:</p>
 
-        <p class="root-world">A root world is a world that has a smaller number of relations with other worlds than the number of agents, before any public announcements are made.<span class="equation-number">(2)</span></p>
-        <p class="specifically">Specifically,</p>
-        <p class="indent">For the riddle “Who has the Sum” with 3 agents, a world is a root world iff the difference between the two smallest numbers is smaller than or equal to 0.<span class="equation-number">(3)</span></p>
-        <p class="indent">In a root world, at least one of the agents knows what their own number is before any announcements are made. 
+        <p class="indented"> 
+        <p class="indented"> A root world is a world that has a smaller number of relations with other worlds than the number of agents, before any public announcements are made.<span class="equation-number">(2)</span></p>
+        <p> Specifically, </p>
+        <p class="indented">For the riddle “Who has the Sum” with 3 agents, a world is a root world iff the difference between the two smallest numbers is smaller than or equal to 0.<span class="equation-number">(3)</span></p>
+        </p>
+        
+        <p> In a root world, at least one of the agents knows what their own number is before any announcements are made. 
             For example, the root world \( (2, 1, 1) \) has only two relations because Achmed sees two 1’s, and therefore knows he himself
             has the sum 2, since the difference \( 1 − 1 \) is 0, and only positive integers are allowed according to the riddle.</p>
 
@@ -92,6 +95,20 @@ title: Strategy
             Achmed knows his number is 50. These worlds are only necessary to model because they can have relations with worlds where <i>k</i> = 3, which <i>can</i> be worlds
             where Achmed knows his number is 50.</p>
 
+        <figure>
+            <img src="/assets/threesum_three_worlds.png.png" alt="A root world with two nodes">
+            <figcaption>Figure 1: Three worlds in the model with root node \( (2, 1, 1) \), where relations
+                        with other worlds are not drawn.</figcaption>
+        </figure>
+
+        <p>We have now explained how and <i>why</i> the initial model is constructed by recursively adding worlds starting at the root world \( (2, 1, 1) \), but there are more
+            root worlds, namely \( (1, 2, 1) \) and \( (1, 1, 2) \). In world \( (2, 1, 1) \) Achmed knows his number, in world \( (1, 2, 1) \) Bert knows his number, and in world \( (1, 1, 2) \) Carl
+            knows his number. For each of these root worlds a model can be recursively created with equation 1. However, due to equation 1, none of these models have
+            any world in common. Therefore the three models can simply be combined into one model, which has three separated clusters of worlds. The public announcement can be used to reduce this model in its entirety.</p>
+
+        <p>An apparent problem is that these three are not the only root worlds—so is
+            for example the world \( (4, 2, 2) \). Yet this world will not be included in the model.
+            But:</p>
         
     </div>
 </body>
