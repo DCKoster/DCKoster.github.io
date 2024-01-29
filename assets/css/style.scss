@@ -54,12 +54,21 @@ sup {
 }
 
 .reference-list {
-            font-family: 'Arial', sans-serif; /* This is a clean, easily readable font */
-            font-size: 0.9em; /* Slightly smaller than the default text size */
-            line-height: 1.6; /* This controls the spacing between lines */
-            margin: 20px 0; /* Adds some space above and below the list */
-            padding-left: 20px; /* Adds indentation to the list */
-            list-style-type: decimal; /* You can choose 'decimal', 'disc', 'circle', etc. */
+    font-family: 'Times New Roman', serif;
+    font-size: 0.8em;
+    line-height: 1.6;
+    margin: 20px 0;
+    padding-left: 40px;
+    list-style-type: decimal;
+}
+
+#references a {
+    color: #808080; /* A shade of gray */
+    text-decoration: none; /* Optional: Removes the underline from links */
+}
+
+#references a:hover {
+    text-decoration: underline; /* Adds underline on hover */
 }
 
 /* Images */
