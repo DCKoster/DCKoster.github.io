@@ -8,6 +8,8 @@ title: Analysis
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <title>Analysis Page</title>
 </head>
 <body>
@@ -34,16 +36,30 @@ title: Analysis
         <h2>Analysis Overview</h2>
 
         <!-- Root world 1 -->
+        <h4>Root world (2, 1, 1)</h4>
         <p>
-            <!-- Description or content of the analysis -->
-            This section can contain the details about your analysis. Replace this text with your own content.
+            For the Analysis, the three different root worlds \( (2, 1, 1) \), \( (1, 2, 1) \) and \( (1, 1, 2) \) are incorporated into a Kripke Model. 
+            As it is not possible for these worlds to reach each other, they will be shown in separate figures to provide a better understanding of what is happening at each step.</p> 
+
+        <p>
+            The first root world will be \( (2, 1, 1) \). This root world is in the form \( (n_a, n_b, n_c) \) with \( max = n_a \). As explained in <a href="formalModel.html">the formal model</a>, it is connected to \( u = (n_a, [n_a + n_c], n_c) \) through \(w \sim_b u\) 
+            and \( v = (n_a, n_b, [n_a + n_b]) \) through \(w \sim_c v\).  
+            The nodes will continue to branch out, with each node having one relation for agent <i>a</i> (Achmed), one for agent <i>b</i> (Bert) and one for agent <i>c</i> (Carl). 
+            The root world of this part of the Kripke Model can be seen in figure 1
+
         </p>
 
         <div class="image-container" style="max-width: 100%;">
             <img src="/assets/1_1.png" alt="The first step of the analysis">
-            <p>Figure 1: The graph which results from the root node (2, 1, 1). 
+            <p>Figure 1: The graph which results from the root world (2, 1, 1). 
                     All edges are colour coded.</p>
         </div>
+
+        <p>
+            After the first public announcement, in which Achmed announces that he does not know his number, 
+            the world \( (2, 1, 1) \) is removed from the model. The announcement does not hold here because Achmed would know his number, as was explained in <a href="strategy.html">the strategy</a>. 
+            The second state can be seen in figure 2. 
+        </p>
 
         <figure class="image-container" style="max-width: 100%;">
             <img src="/assets/1_2.png" alt="Another step of the analysis">
@@ -51,17 +67,38 @@ title: Analysis
                     all nodes where this announcement does not hold are removed.</figcaption>
         </figure>
 
+        <p>
+            Bert is second to announce that he does not know his number. 
+            He logically reasoned that the numbers he is seeing, are not a multiple of the worlds in which he is sure what the numbers would be, which for Bert is the world \( (2, 3, 1) \). 
+            Thus the public announcement does not hold here and this world is removed. 
+            Figure 3 shows the third state, which occurs after Bert his announcement.
+        </p>
+
         <div class="image-container" style="max-width: 100%;">
             <img src="/assets/1_3.png" alt="Another  step of the analysis">
             <figcaption>Figure 3: The graph after the second public announcement. 
                 All nodes where it does not hold are removed.</figcaption>
         </div>
 
+        <p>
+            Carl is the third one to announce he does not know his number. 
+            Again, he logically reasoned that the numbers on the heads of the other two are not multiples of the states he is sure he knows the number. 
+            The worlds which are removed because the public announcement does not hold, are \( (2, 3, 5) \) and \( (2, 1, 3) \). 
+            The result of his announcement is in figure 4
+        </p>
+
         <figure class="image-container" style="max-width: 100%;">
             <img src="/assets/1_4.png" alt="Another step of the analysis">
             <figcaption>Figure 4: The graph after the third public announcement. 
                 All nodes where it does not hold are removed.</figcaption>
         </figure>
+
+        <p>
+            After the three public announcements that Achmed, Bert and Carl do not know their number, 
+            Achmed announces that he now knows his number and that it is 50. 
+            All states in which Achmed can be sure to know his number are highlighted in figure 5, 
+            which are \( (4, 3, 1) \), \( (8, 3, 5) \) and \( (4, 1, 3) \)
+        </p>
 
         <figure class="image-container" style="max-width: 100%;">
             <img src="/assets/1_5.png" alt="Another step of the analysis">
@@ -70,16 +107,29 @@ title: Analysis
     
 
     <!-- Root world 2 -->
+    <h4>Root world (1, 2, 1)</h4>
+
+        <p>
+            The second root node is \( (1, 2, 1) \). 
+            This root node is in the form \( (n_a, n_b, n_c) \) with \( max = n_b \). 
+            As explained in <a href="formalModel.html">the formal model</a> it is connected to \( u = ([n_b + n_c], n_b, n_c) \) through \(w \sim_a u\) and \( v = (n_a, n_b, [n_a + n_b]) \) through \(w \sim_c v\).
+            The root world has the same branching structure as the previous one, which can be seen in figure 6 
+        </p>
+        <p>
+            The first public announcement of Achmed does not influence the model as there is no world where it does not hold. 
+            The second public announcement by Bert does, as the announcement does not hold in the root node \( (1, 2, 1) \). 
+            The resulting model is shown in figure 7 
+        </p>
         <figure class="image-gallery">
             <div class="image-container" style="max-width: 100%;">
                 <img src="/assets/2_1.png" alt="The first step of the analysis ">
-                <figcaption>Figure 6: The graph which results from the root node (2, 1, 1). 
+                <figcaption>Figure 6: The graph which results from the root world (2, 1, 1). 
                     All edges are colour coded. </figcaption>
             </div>
         
             <div class="image-container" style="max-width: none; width: auto;">
                 <img src="/assets/2_2.png" alt="Another step of the analysis ">
-                <figcaption>Figure 7: When the first public announcement is made, 
+                <figcaption>Figure 7: When the second public announcement is made, 
                     all nodes where this announcement does not hold are removed.</figcaption>
             </div>
         </figure>
@@ -87,7 +137,7 @@ title: Analysis
         <figure class="image-gallery">
             <div class="image-container" style="margin-left: -20px; margin-right: -20px; width: calc(100% + 40px);">
                 <img src="/assets/2_1.png" alt="The first step of the analysis ">
-                <figcaption>Figure 6: The graph which results from the root node (2, 1, 1). 
+                <figcaption>Figure 6: The graph which results from the root world (2, 1, 1). 
                     All edges are colour coded. </figcaption>
             </div>
         
@@ -101,6 +151,7 @@ title: Analysis
         
 
     <!-- Root world 3 -->
+    <h4>Root world (1, 1, 2)</h4>
 
         
     </div>
