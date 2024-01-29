@@ -70,7 +70,7 @@ title: Variations
         </ol>
 
         <p>
-            For the model itself, each world <i>w</i> now represents 4 numbers \( n_a, n_b, n_c,\) and \( n_d )\ and is referenced as \( (n_a, n_b, n_c, n_d) \). 
+            For the model itself, each world <i>w</i> now represents 4 numbers \( n_a, n_b, n_c,\) and \( n_d \) and is referenced as \( (n_a, n_b, n_c, n_d) \). 
             Each world has 4 relations \( \sim_a, \sim_b, \sim_c \), and \( \sim_d \) with other worlds, because the agents know they have either the
             sum or the difference of the other three numbers (the largest number they see
             minus the sum of the two smallest numbers they see). To construct the model
@@ -89,10 +89,10 @@ title: Variations
             number and the sum of the two smallest numbers is smaller than or equal to 0. <span class="equation-number">(6)</span></p>
 
         <p>
-            Somewhat similar to the 3 person riddle, four of the root nodes are /( (3, 1, 1, 1) \), /( (1, 3, 1, 1) \), /( (1, 1, 3, 1) \), and /( (1, 1, 1, 3) \), 
-            where the world /( w = (na, nb, nc, nd) \) follows the pattern /( (3x, x, x, x) \) for any order of /( na, nb, nc, \) and \( nd \). 
+            Somewhat similar to the 3 person riddle, four of the root nodes are \( (3, 1, 1, 1) \), \( (1, 3, 1, 1) \), \( (1, 1, 3, 1) \), and \( (1, 1, 1, 3) \), 
+            where the world \( w = (na, nb, nc, nd) \) follows the pattern \( (3x, x, x, x) \) for any order of \( na, nb, nc, \) and \( nd \). 
             However, there are more than these. In fact, there is an unlimited number of root nodes. For
-            example, all worlds that follow the pattern /( (2x, x, y, z) \), such as /( (4, 2, 1, 1) \), are
+            example, all worlds that follow the pattern \( (2x, x, y, z) \), such as \( (4, 2, 1, 1) \), are
             root nodes. And there are many root nodes that do not follow such a specific
             pattern, which makes it so that there is an unlimited number of models that
             are <i>not</i> bisimilar. This is why we added to the riddle that none of the numbers are larger than 40.
@@ -131,7 +131,7 @@ title: Variations
             <li>Achmed: “I don’t know my number.”</li>
             <li>Bert: “I don’t know my number.”</li>
             <li>Carl: “I don’t know my number.”</li>
-            <li>Achmed: “I know my number. It is 50.”</li>
+            <li>Achmed: “I know my number. It is <p><b>NUMPRODUCT</b></p>.”</li>
         </ol>
         <p>What are the other numbers?</p>
         
@@ -154,12 +154,51 @@ title: Variations
 
         <p>
             To construct the model recursively for this variation, for every world \( w =
-            (n_a, n_b, n_c) \), the worlds u and v are added to the Kripke model, where
+            (n_a, n_b, n_c) \), the worlds <i>u</i> and <i>v</i> are added to the Kripke model, where
+        </p>
+
+        <div>
+            <img src="/assets/product_world_progression.png" alt="A formula to explain how the progession of worlds goes">
+        </div>
+
+        <p> where \( max = max(n_a,n_b,n_c) \). </p>
+
+        <p> In contrast to the 3 person riddle, and in contrast to <a href="strategy.html">definition 3</a>, a root
+        world for the product variation is defined as such: </p>
+
+        <p class="indented-big"> For the riddle “Who has the Product” with 3 agents, a
+            world is a root world <i>iff</i> the two largest numbers are
+            identical, or if the division of the second largest number by
+            the smallest number is not an integer. <span class="equation-number">(8)</span></p>
+
+        <p>
+            When the two largest numbers are identical, a root world \( w = (n_a, n_b, n_c) \)
+            follows the pattern \( (1, x, x) \) for any order of \( n_a, n_b, \) and \( n_c \). Root worlds where
+            the division of the second largest number by the smallest number is not an
+            integer, do not follow a specific pattern. This is just a matter of rounding.
+            Again, there is an infinite number of root worlds, when the limit of LIMITPRODUCT is not taken into account. And again, there is an unlimited number
+            of models that are <i>not</i> bisimilar. In fact, we can not make use of bisimilarity at
+            all, because for example if we multiple the numbers in the world \( (2, 2, 1) \) by 2,
+            we get \( (4, 4, 2) \), in which 4 is not the product of 4 and 2. For this variation we
+            added to the riddle that none of the numbers are larger than LIMITPRODUCT.
+        </p>
+
+        <p>
+            In regards to our research question of whether a Kripke Model will still be
+            efficient when implemented on variants of “Who has the Sum?” if fundamental
+            changes are made to the riddle, the fundamental change we make here is that
+            we remove the option to consider bisimilar models. And like the 4 person sum
+            variation, there are more root nodes.
+        </p>
+
+        <p>
+            To complete the strategy for this variation, the task is to create the model
+            that contains all root nodes, with only the worlds <i>w</i> where <i>k</i> &le; 4 in <i>r</i> &rarr;<sup><i>k</i></sup> <i>w</i>, to
+            reduce the model with the public announcements, to find in the final reduced
+            model the world where Achmed knows his number is <b>exactly NUMPRODUCT</b> \( (K_a x_NUMPRODUCT) \), and to finally note the numbers of the others in
+            that world (\(n_b\) and \(n_c\)).
         </p>
         
     </div>
-
-        
-
 </body>
 </html>
