@@ -8,6 +8,8 @@ title: Discussion
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <title>Discussion Page</title>
 </head>
 <body>
@@ -30,22 +32,34 @@ title: Discussion
 
     <!-- Main content area -->
     <div class="content">
-        <h2></h2>
+        
         <p>
-            <!-- Description or content of the analysis -->
-            This section can contain the details about your analysis. Replace this text with your own content.
+            
         </p>
 
-        <!-- Additional content can go here -->
+        <h3>Future Work</h3>
         <p>
-            More analysis details can be added in this section. Feel free to add more text or images.
+            The variations of the "Who has the Sum" riddle both have an infinite number of root worlds, 
+            which is problematic for the Kripke Model. Example formulas for root worlds are given 
+            ( \( (3x, x, x, x) \) and \( (2x, x, y, z) \) for the four persons, and \( (1, x, x) \) for the product riddle), 
+            however no complete definitions of the root worlds have been given in this project. 
+            As this was not within the scope of the project, no further effort to define them other than the example formulas
+            (and some others which were left out) has been spent on this problem. 
+            It would be interesting to see if a definition for all root worlds, for both or either of the variations, 
+            exists and if so, what it would be.
+        </p>
+        <p>
+            Furthermore, the project has shown that the variations are not efficiently solvable by a Kripke Model approach. 
+            Another approach which would not feature Kripke Model, but perhaps some other mathematical concept, 
+            could be found to do find an efficient way to solve the riddle. 
+        </p>
+        <p>
+            The last suggestion is a minor one. As the project focused on testing the efficiency of the strategy on 
+            the variations, no further effort was put into actually formulating a solution to the riddle. 
+            The authors would be interested to know whether it there is a possible solution when Achmed announces his number, 
+            and what that number would be.
         </p>
     </div>
-
-    <!-- Footer section -->
-    <footer>
-        <p>© 2024 Your Name or Organization</p>
-    </footer>
-
+    
 </body>
 </html>
