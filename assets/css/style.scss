@@ -14,6 +14,7 @@
     color: #CC9933;
 } */
 
+/* Some !important statements to overwrite the original theme file */
 p i {/* Make sure the italic text works in <p> */
     font-style: italic !important;
 }
@@ -31,6 +32,7 @@ sup {
     font-size: smaller !important;
 }
 
+/* some adjustment of the width of the page */
 .main-content {
     width: 100%; /* Full width */
     max-width: 1200px; /* Maximum width, adjust as needed */
@@ -42,6 +44,7 @@ sup {
     max-width: 960px; /* Adjust this value as needed */
 }
 
+/* Extra classes for layout purposes */
 .indented {
     margin-left: 20px; /* Adjust the value as needed */
 }
@@ -50,6 +53,16 @@ sup {
     margin-left: 50px; /* Adjust the value as needed */
 }
 
+.reference-list {
+            font-family: 'Arial', sans-serif; /* This is a clean, easily readable font */
+            font-size: 0.9em; /* Slightly smaller than the default text size */
+            line-height: 1.6; /* This controls the spacing between lines */
+            margin: 20px 0; /* Adds some space above and below the list */
+            padding-left: 20px; /* Adds indentation to the list */
+            list-style-type: decimal; /* You can choose 'decimal', 'disc', 'circle', etc. */
+}
+
+/* Images */
 .image-gallery {
     display: flex; /* Use Flexbox for layout */
     justify-content: space-between; /* Distribute space evenly between elements */
@@ -97,7 +110,7 @@ sup {
     height: auto; /* Maintain aspect ratio */
 }
 
-/* Basic Button Styling */
+/* Buttons */
 .button {
         background-color: #333300; /* Slate button color */
         color: white; /* Text color */
@@ -110,7 +123,6 @@ sup {
         transition: background-color 0.3s; /* Smooth transition for hover effect */
 }
 
-/* Button Hover Effect */
 .button:hover {
         background-color: #5a6268; /* Slightly darker shade on hover */
 }
