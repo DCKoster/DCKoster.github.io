@@ -84,6 +84,7 @@ sup {
     flex: 1; /* Each container takes equal space */
     text-align: center; /* Center content inside the container */
     max-width: 100%; /* Make image responsive */
+    max-width: calc(50% - 20px); /* Adjusts max width considering margin */
 }
 
 .image-container img {
