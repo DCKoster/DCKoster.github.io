@@ -8,6 +8,8 @@ title: Variations
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <title>Variations Page</title>
 </head>
 <body>
@@ -43,7 +45,7 @@ title: Variations
             <li>Achmed: “I don’t know my number.”</li>
             <li>Bert: “I don’t know my number.”</li>
             <li>Carl: “I don’t know my number.”</li>
-            <li><b>Dana: “I don’t know my number.”</b></li>
+            <li><p><b>Dana: “I don’t know my number.”</b></p></li>
             <li>Achmed: “I know my number. It is NUM4.”</li>
         </ol>
         <p>What are the other numbers?</p>
@@ -118,6 +120,42 @@ title: Variations
     <!-- Product variation -->
     <div class="content">
         <h2> Prodcut Variation</h2>
+
+        <p>Our product variation of the ”Who has the sum?” (”Who has the product?”) goes as follows (the differences are in <b>bold</b>):</p>
+        <p>Achmed, Bert, and Carl all have a positive integer on their forehead. 
+            They can only see the foreheads of others. One of the numbers is the <b>product</b> of the other two. 
+            <b>None of the numbers are larger than LIMITPRODUCT</b>
+            All the previous is common knowledge, all agents are perfect logicians, they always speak the truth, 
+            which is also common knowledge. They now successively make the truthful announcements:</p>
+        <ol class="indented">
+            <li>Achmed: “I don’t know my number.”</li>
+            <li>Bert: “I don’t know my number.”</li>
+            <li>Carl: “I don’t know my number.”</li>
+            <li>Achmed: “I know my number. It is 50.”</li>
+        </ol>
+        <p>What are the other numbers?</p>
+        
+        <p class="indented"> The public announcements are now formally as follows:  </p>
+    
+        <ol class="indented">
+            <li>\( \neg K_a 1_a \land \neg K_a 2_a \land \ldots \land \neg K_a x_a \) (for all \( x \in \mathbb{Z}^+ \))</li>
+            <li>\( \neg K_b 1_b \land \neg K_b 2_b \land \ldots \land \neg K_b x_b \) (for all \( x \in \mathbb{Z}^+ \))</li>
+            <li>\( \neg K_c 1_c \land \neg K_c 2_c \land \ldots \land \neg K_c x_c \) (for all \( x \in \mathbb{Z}^+ \))</li>
+            <li>\( K_a NUMPRODUCT_a \)</li>
+        </ol>
+
+        <p class="indented"> The differences with the 3 person riddle are, summarised: </p>
+
+        <ol class="indented">
+            <li> One of the numbers is the product of the other two instead of the sum. </li>
+            <li>  None of the numbers are larger than LIMITPRODUCT. </li>
+            <li>  Achmed’s number is not 50, but NUMPRODUCT. </li>
+        </ol>
+
+        <p>
+            To construct the model recursively for this variation, for every world \( w =
+            (n_a, n_b, n_c) \), the worlds u and v are added to the Kripke model, where
+        </p>
         
     </div>
 
