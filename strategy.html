@@ -108,6 +108,27 @@ title: Strategy
         <p>An apparent problem is that these three are not the only root worlds—so is
             for example the world \( (4, 2, 2) \). Yet this world will not be included in the model.
             But:</p>
+
+        <p class="indented-big"> All models with a root world where the numbers follow the pattern \( (2x, x, x) \), are <i>bisimilulations</i> of all other models
+            with a root world where the numbers follow the pattern \( (2x, x, x) \). <span class="equation-number">(4)</span></p>
+
+        <p>Bisimulations are models where corresponding states represent the same atomic information, and where all relations are identical (Blackburn et al., 2001,
+            p. 64). In this case, all models with the root world \( (2x, x, x) \) are bisimilar since all worlds become identical after dividing all numbers in one of the models by
+            <i>x</i>. For example, the worlds \( (2, 1, 1) \), \( (2, 3, 1) \), and \( (2, 1, 3) \) in figure 1 could be replaced with the worlds \( (10, 5, 5) \), \( (10, 15, 5) \), and \( (10, 5, 15) \) by multiplying all
+            numbers by 5. In the same way, all models with a root world \( (x, 2x, x) \) are bisimilar, as are those with a root world \( (x, x, 2x) \) because the relations are
+            identical. Of course all these models are rather parts/cluster of the complete Kripke model, but that does not matter since there are no relations between
+            the clusters.</p>
+
+        <p class="indented"> To conclude: </p>
+        <ol class="indented">
+            <li>  The bisimilar models of the model with root nodes \( (2, 1, 1) \), \( (1, 2, 1) \), and \( (1, 1, 2) \) include all possible root worlds. </li>
+            <li> Achmed can only know his number in the worlds <i>w</i> where <i>k</i> &lt; 4 in <i>r</i> &rarr;<sup>k</sup> <i>w</i>.</li>
+        </ol>
+
+        <p> So to complete this strategy, the task is to create the model with root nodes \( (2, 1, 1) \), \( (1, 2, 1) \), and \( (1, 1, 2) \) 
+        with only the worlds <i>w</i> where <i>k</i> &lt; 4 in <i>r</i> &rarr;<sup>k</sup> <i>w</i>, to reduce the model with the public announcements, to find in the final reduced
+model the world where Achmed knows his number is a multiple of 50 ( \( K_a x_a \) for any <i>x</i> and <i>y</i> where \( x * y = 50 \)), and to finally note the numbers of the others in
+that world (\(n_b)\ and \(n_c\)) </p>
         
     </div>
 </body>
