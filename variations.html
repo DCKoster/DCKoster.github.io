@@ -89,18 +89,18 @@ title: Variations
             number and the sum of the two smallest numbers is smaller than or equal to 0. <span class="equation-number">(6)</span></p>
 
         <p>
-            Somewhat similar to the 3 person riddle, four of the root nodes are \( (3, 1, 1, 1) \), \( (1, 3, 1, 1) \), \( (1, 1, 3, 1) \), and \( (1, 1, 1, 3) \), 
+            Somewhat similar to the 3 person riddle, four of the root worlds are \( (3, 1, 1, 1) \), \( (1, 3, 1, 1) \), \( (1, 1, 3, 1) \), and \( (1, 1, 1, 3) \), 
             where the world \( w = (na, nb, nc, nd) \) follows the pattern \( (3x, x, x, x) \) for any order of \( na, nb, nc, \) and \( nd \). 
-            However, there are more than these. In fact, there is an unlimited number of root nodes. For
+            However, there are more than these. In fact, there is an infinite number of root worlds. For
             example, all worlds that follow the pattern \( (2x, x, y, z) \), such as \( (4, 2, 1, 1) \), are
-            root nodes. And there are many root nodes that do not follow such a specific
+            root worlds. And there are many root worlds that do not follow such a specific
             pattern, which makes it so that there is an unlimited number of models that
             are <i>not</i> bisimilar. This is why we added to the riddle that none of the numbers are larger than 40.
         </p>
 
         <p>
             In regards to our research question of whether a Kripke Model will still be efficient when implemented on variants of “Who has the Sum?” if fundamental
-            changes are made to the riddle, the fundamental change we make here is that instead of 3 root nodes, there is much larger number of them.
+            changes are made to the riddle, the fundamental change we make here is that instead of 3 root worlds, there is much larger number of them.
         </p>
 
         <p>
@@ -109,7 +109,7 @@ title: Variations
         </p>
 
         <p>
-            To complete the strategy for this variation, the task is to create the model that contains <b>all</b> root nodes, but with only the worlds 
+            To complete the strategy for this variation, the task is to create the model that contains <b>all</b> root worlds, but with only the worlds 
             <i>w</i> where <i>k</i> &le; <b>5</b> in <i>r</i> &rarr;<sup><i>k</i></sup> <i>w</i>, to reduce the model with the public announcements, 
             to find in the final reduced model the world where Achmed knows his number is a multiple of <b>NUM4</b>
             ( \( K_a x_a \) for any <i>x</i> and <i>y</i> where \( x * y = NUM4 \) ), and to finally note the numbers of the others in that world \( (n_b, n_c, \) <b>and</b> \( n_d) \).
@@ -119,7 +119,7 @@ title: Variations
 
     <!-- Product variation -->
     <div class="content">
-        <h2> Prodcut Variation</h2>
+        <h2> Product Variation</h2>
 
         <p>Our product variation of the ”Who has the sum?” (”Who has the product?”) goes as follows (the differences are in <b>bold</b>):</p>
         <p>Achmed, Bert, and Carl all have a positive integer on their forehead. 
@@ -188,12 +188,12 @@ title: Variations
             efficient when implemented on variants of “Who has the Sum?” if fundamental
             changes are made to the riddle, the fundamental change we make here is that
             we remove the option to consider bisimilar models. And like the 4 person sum
-            variation, there are more root nodes.
+            variation, there are more root worlds.
         </p>
 
         <p>
             To complete the strategy for this variation, the task is to create the model
-            that contains all root nodes, with only the worlds <i>w</i> where <i>k</i> &le; 4 in <i>r</i> &rarr;<sup><i>k</i></sup> <i>w</i>, to
+            that contains all root worlds, with only the worlds <i>w</i> where <i>k</i> &le; 4 in <i>r</i> &rarr;<sup><i>k</i></sup> <i>w</i>, to
             reduce the model with the public announcements, to find in the final reduced
             model the world where Achmed knows his number is <b>exactly NUMPRODUCT</b> \( (K_a x_NUMPRODUCT) \), and to finally note the numbers of the others in
             that world (\(n_b\) and \(n_c\)).
