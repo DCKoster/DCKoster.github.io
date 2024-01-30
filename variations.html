@@ -46,7 +46,7 @@ title: Variations
             <li>Bert: “I don’t know my number.”</li>
             <li>Carl: “I don’t know my number.”</li>
             <li><b>Dana: “I don’t know my number.”</b></li>
-            <li>Achmed: “I know my number. It is NUM4.”</li>
+            <li>Achmed: “I know my number. It is N4.”</li>
         </ol>
         <p>What are the other numbers?</p>
 
@@ -57,7 +57,7 @@ title: Variations
             <li>\( \neg K_b 1_b \land \neg K_b 2_b \land \ldots \land \neg K_b x_b \) (for all \( x \in \mathbb{Z}^+ \))</li>
             <li>\( \neg K_c 1_c \land \neg K_c 2_c \land \ldots \land \neg K_c x_c \) (for all \( x \in \mathbb{Z}^+ \))</li>
             <li>\( \neg K_d 1_d \land \neg K_d 2_d \land \ldots \land \neg K_d x_d \) (for all \( x \in \mathbb{Z}^+ \))</li>
-            <li>\( K_a NUM4_a \)</li>
+            <li>\( K_a N4_a \)</li>
         </ol>
 
         <p class="indented"> The differences with the 3 person riddle are, summarised: </p>
@@ -65,7 +65,7 @@ title: Variations
         <ol class="indented">
             <li> There are 4 agents rather than 3. </li>
             <li> There are 5 public announcements rather than 4. </li>
-            <li>  Achmed’s number is not 50, but NUM4.</li>
+            <li>  Achmed’s number is not 50, but N4. This is a variable which can be modified to give different answers for the riddle. </li>
             <li> None of the numbers are larger than 40. </li>
         </ol>
 
@@ -111,8 +111,8 @@ title: Variations
         <p>
             To complete the strategy for this variation, the task is to create the model that contains <b>all</b> root worlds, but with only the worlds 
             <i>w</i> where <i>k</i> &le; <b>5</b> in <i>r</i> &rarr;<sup><i>k</i></sup> <i>w</i>, to reduce the model with the public announcements, 
-            to find in the final reduced model the world where Achmed knows his number is a multiple of <b>NUM4</b>
-            ( \( K_a x_a \) for any <i>x</i> and <i>y</i> where \( x * y = NUM4 \) ), and to finally note the numbers of the others in that world \( (n_b, n_c, \) <b>and</b> \( n_d) \).
+            to find in the final reduced model the world where Achmed knows his number is a multiple of <b>N4</b>
+            ( \( K_a x_a \) for any <i>x</i> and <i>y</i> where \( x * y = N4 \) ), and to finally note the numbers of the others in that world \( (n_b, n_c, \) <b>and</b> \( n_d) \).
         </p>
         
     </div>
@@ -124,14 +124,14 @@ title: Variations
         <p>Our product variation of the ”Who has the sum?” (”Who has the product?”) goes as follows (the differences are in <b>bold</b>):</p>
         <p>Achmed, Bert, and Carl all have a positive integer on their forehead. 
             They can only see the foreheads of others. One of the numbers is the <b>product</b> of the other two. 
-            <b>None of the numbers are larger than LIMITPRODUCT</b>
+            <b>None of the numbers are larger than 50</b>
             All the previous is common knowledge, all agents are perfect logicians, they always speak the truth, 
             which is also common knowledge. They now successively make the truthful announcements:</p>
         <ol class="indented">
             <li>Achmed: “I don’t know my number.”</li>
             <li>Bert: “I don’t know my number.”</li>
             <li>Carl: “I don’t know my number.”</li>
-            <li>Achmed: “I know my number. It is <b>NUMPRODUCT</b>.”</li>
+            <li>Achmed: “I know my number. It is <b>NP</b>.”</li>
         </ol>
         <p>What are the other numbers?</p>
         
@@ -141,15 +141,15 @@ title: Variations
             <li>\( \neg K_a 1_a \land \neg K_a 2_a \land \ldots \land \neg K_a x_a \) (for all \( x \in \mathbb{Z}^+ \))</li>
             <li>\( \neg K_b 1_b \land \neg K_b 2_b \land \ldots \land \neg K_b x_b \) (for all \( x \in \mathbb{Z}^+ \))</li>
             <li>\( \neg K_c 1_c \land \neg K_c 2_c \land \ldots \land \neg K_c x_c \) (for all \( x \in \mathbb{Z}^+ \))</li>
-            <li>\( K_a NUMPRODUCT_a \)</li>
+            <li>\( K_a NP_a \)</li>
         </ol>
 
         <p class="indented"> The differences with the 3 person riddle are, summarised: </p>
 
         <ol class="indented">
             <li> One of the numbers is the product of the other two instead of the sum. </li>
-            <li>  None of the numbers are larger than LIMITPRODUCT. </li>
-            <li>  Achmed’s number is not 50, but NUMPRODUCT. </li>
+            <li>  None of the numbers are larger than 50. </li>
+            <li>  Achmed’s number is not 50, but NP. Again, this is a variable which can be modified to give different answers for the riddle. </li>
         </ol>
 
         <p>
@@ -176,11 +176,11 @@ title: Variations
             follows the pattern \( (1, x, x) \) for any order of \( n_a, n_b, \) and \( n_c \). Root worlds where
             the division of the second largest number by the smallest number is not an
             integer, do not follow a specific pattern. This is just a matter of rounding.
-            Again, there is an infinite number of root worlds, when the limit of LIMITPRODUCT is not taken into account. And again, there is an unlimited number
+            Again, there is an infinite number of root worlds, when the limit of 50 is not taken into account. And again, there is an unlimited number
             of models that are <i>not</i> bisimilar. In fact, we can not make use of bisimilarity at
             all, because for example if we multiple the numbers in the world \( (2, 2, 1) \) by 2,
             we get \( (4, 4, 2) \), in which 4 is not the product of 4 and 2. For this variation we
-            added to the riddle that none of the numbers are larger than LIMITPRODUCT.
+            added to the riddle that none of the numbers are larger than 50.
         </p>
 
         <p>
@@ -195,7 +195,7 @@ title: Variations
             To complete the strategy for this variation, the task is to create the model
             that contains all root worlds, with only the worlds <i>w</i> where <i>k</i> &le; 4 in <i>r</i> &rarr;<sup><i>k</i></sup> <i>w</i>, to
             reduce the model with the public announcements, to find in the final reduced
-            model the world where Achmed knows his number is <b>exactly NUMPRODUCT</b> \( (K_a x_NUMPRODUCT) \), and to finally note the numbers of the others in
+            model the world where Achmed knows his number is <b>exactly NP</b> \( (K_a x_NP) \), and to finally note the numbers of the others in
             that world (\(n_b\) and \(n_c\)).
         </p>
         
