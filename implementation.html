@@ -8,6 +8,8 @@ title: Implementation
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <title>Implementation Page</title>
 </head>
 <body>
@@ -31,12 +33,88 @@ title: Implementation
 
     <!-- Main content area -->
     <div class="content">
-        <h2></h2>
+        <h2>Tree generation</h2>
         <p>
-            
-          
+            First, for all of the riddles, the corresponding trees have to be generated. The trees are built by using recursion. The trees consist of worlds, which are the
+fundamental building blocks of the data structure. The trees are generated to a fixed depth because the trees could be infinitely big. Each world has three important attributes:   
+        </p>
+        <ol class="indented">
+            <li>Data: This attribute represents the actual world of the world and is saved as a tuple.</li>
+            <li>Index: The index attribute represents to which person the world corresponds</li>
+            <li>Children worlds: worlds in trees are organized in a hierarchical manner. These children worlds are essentially the worlds that are linked or associated with the current world.</li>
+        </ol>
+
+        <h3>"Who has the Sum?" Riddle</h3>
+        <p>
+            In the "Who has the Sum?" riddle with three persons, the attribute <i>data</i> contains a triple where index zero corresponds to Achmed, index one corresponds to Bert, and index two corresponds
+to Carl. For example, the triple \( (2,3,1) \) represents the world where Achmed has 2, Bert has 3, and Carl has 1. Each world has either zero or two worlds. Since
+there are three different root worlds in this case, only three different trees will be generated
         </p>
 
+        <h3>"Who has the Sum?" Four Person Variation</h3>
+        <p>
+            In the "Who has the Sum?" riddle with four persons, the attribute <i>data</i> contains a quadruple where index zero
+corresponds to Achmed, index one corresponds to Bert, index two corresponds
+Carl and index three corresponds to Dana. For example, the quadruple \( (5,3,1,1) \)
+represents the world where Achmed has 5, Bert has three, Carl has one and Dana
+has one. Each world has either zero or three worlds. In this four person riddle,
+there are many possible root worlds. Therefore, the different root worlds first have to be found before generating the trees. The root worlds are generated
+only for sets where the largest number in the set is less than 20. This restriction
+is used because there are an infinite number of possible sets when the sum goes
+to infinity, making it impractical for computation. 
+        </p>
+
+        <figure>
+            <img src="/assets/code_four_persons.png" alt="Code for the four persons variation">
+            <figcaption>Figure 1: Code that was used for generating the different roots for the "Who has the Sum?" Four Person Variation.</figcaption>
+        </figure>
+        
+        <p>
+            Figure 1 shows the code that was used for generating the different roots up to a sum of 20. Each quadruple
+    is initially sorted from the lowest number to the highest number. In order for a quadruple to be considered a root, it must satisfy two conditions. First, the
+    largest (i.e. most-right) number must be equal to the sum of the smallest three numbers. Second, the difference between the second highest number and the
+    two lowest numbers must be less than or equal to zero. Whenever, the difference is zero, the agent with the highest number is sure that he has the sum of the
+    other three agents. Less than zero is included for roots of the form \( (3x, x, x) \) where \( x − 2x &lt; 0 \). After the roots are generated, a filtering process is used
+    to eliminate all bisimulations. Finally, the trees are generated with all of the remaining roots.
+        </p>
+
+        <h3>"Who has the Product?" Variation</h3>
+        <p>
+            In the product riddle, the attribute <i>data</i> contains a triple (similar to the three
+            sum riddle) where index zero corresponds to Achmed, index one corresponds to Bert, index two corresponds Carl and index three corresponds to Dana. Like
+            in the four person riddle, there are many possible worlds in the product riddle. Figure 2 shows how the roots are generated for the product riddle. Each triple
+            is initially sorted from the lowest number to the highest number. In order for a triple to be considered a root, it must satisfy two conditions. First, the
+            largest (i.e. most-right) number must be equal to the product of the two lowest numbers. Second, the remainder of the two lowest number must be higher than
+            zero. Whenever the remainder is higher than zero, the agent with the highest number is sure that he has the product of the other two agents (i.e. because
+            only integers exist). Whenever the highest number is equal to the second highest number, the agent with the highest number is also sure the he has the product
+            of the other two agents. After the roots are generated, all different trees are made.
+        </p>
+
+        <figure>
+            <img src="/assets/code_product.png" alt="Code for the four persons variation">
+            <figcaption>Figure 2: Code that was used for generating the different roots for the product riddle..</figcaption>
+        </figure>
+
+        <h2>Announcement processing</h2>
+        <p>
+            In every announcement, an agent has two possibilities. The agent can say: ”I do not know my number.” or the agent can say: ”I know my number.”
+        </p>
+
+        <p>
+            In general, whenever the agent says that he does not know his number, all
+roots for which the state of the agent that makes the announcement matches
+the state of the root are deleted. This is the case because the root only contains
+relations to states of other agents.
+        </p>
+
+        <p>
+            Whenever the agent says that he does know his number, the solution must
+satisfy two conditions. First, the state of the root must match the agent who
+makes the announcement that he knows his number. Second, the agent’s number
+in the tuple matches the number that he says. In the three sum riddle and four
+sum riddle, there are more solutions as here the a solution is also valid when the
+agent’s answer is a multiple of the agent’s number in the tuple (bisimulations).
+        </p>
 
     </div>
 </body>
