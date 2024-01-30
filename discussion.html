@@ -52,7 +52,14 @@ title: Discussion
         <p>
             In the "Who has the Product" riddle, the same can be seen. By removing the bisimilarity of the disconnected trees, 
             the amount of root worlds also exploded. Because of this, the same conclusion can be made as in the other variation: 
-            the Kripke Model approach is not efficient when solving this riddle. 
+            the Kripke Model approach is not efficient when solving this riddle.
+        </p>
+        <p>
+            Implementing the two variations was only possible if we set a limit to how large the numbers could be. But something that
+            we (willingly) ignored in this implementation, is that this actually adds even more root nodes because of the additional information
+            that a number above the limit is not possible. We decided that instead of incorporating this into the explanation and model, we simply
+            discuss it here as a limitation of using Kripke models for this problem. The issue of creating root worlds by setting a limit
+            would disappear if we would have been able to put the limit high enough.
         </p>
 
         <p>
